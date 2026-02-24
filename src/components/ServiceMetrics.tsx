@@ -2,6 +2,7 @@
 
 "use client";
 
+import { ALL_SERVICES } from "@/constants/services";
 import {
   BarChart,
   Bar,
@@ -16,8 +17,6 @@ interface Incident {
   service: string;
   errorCount: number;
 }
-
-const ALL_SERVICES = ["auth", "database", "payments", "notifications"];
 
 export default function ServiceMetrics({
   incidents,

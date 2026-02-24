@@ -1,7 +1,7 @@
 /* src\app\api\logs\route.ts */
 
 import { NextResponse } from "next/server";
-import { generateLogs } from "@/lib/logGenerator";
+import { generateLogs } from "@/services/logGenerator";
 
 export async function GET() {
   const logs = generateLogs(5);

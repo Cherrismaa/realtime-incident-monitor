@@ -1,4 +1,4 @@
-/* src/lib/detectionEngine.ts */ 
+/* src/services/detectionEngine.ts */ 
 
 import { LogEntry } from "@/types/log";
 

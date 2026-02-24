@@ -2,7 +2,7 @@
 
 "use client";
 
-import { DetectionEngine } from "@/lib/detectionEngine";
+import { DetectionEngine } from "@/services/detectionEngine";
 
 import { useEffect, useState } from "react";
 import { LogEntry } from "@/types/log";
