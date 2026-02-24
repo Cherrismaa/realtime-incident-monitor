@@ -1,4 +1,4 @@
-# 🚀 Real-Time Log Monitoring & Intelligent Incident Detection Platform
+# Real-Time Log Monitoring & Intelligent Incident Detection Platform
 
 A real-time monitoring dashboard that streams logs from simulated microservices, applies sliding window anomaly detection, automatically manages incident lifecycle, and visualizes system health dynamically.
 
@@ -12,12 +12,12 @@ This project simulates how real-world observability platforms analyze logs in re
 
 The platform:
 
-- 📜 Streams logs continuously  
-- 🚨 Detects abnormal error spikes  
-- 🔄 Automatically triggers and resolves incidents  
-- 🟢 Displays real-time system health  
-- 📊 Visualizes service-level error distribution  
-- 🌗 Supports light and dark themes  
+📜 Streams logs continuously  
+🚨 Detects abnormal error spikes  
+🔄 Automatically triggers and resolves incidents  
+🟢 Displays real-time system health  
+📊 Visualizes service-level error distribution  
+🌗 Supports light and dark themes  
 
 It models core concepts used in tools like Datadog, New Relic, and Splunk.
 
@@ -94,9 +94,9 @@ Active incidents are stored in memory and reflected in the UI instantly.
 
 System health is derived from active incident count:
 
-- 🟢 Healthy → No active incidents  
-- 🟡 Degraded → 1–2 active incidents  
-- 🔴 Critical → Multiple active incidents  
+🟢 Healthy → No active incidents  
+🟡 Degraded → 1–2 active incidents  
+🔴 Critical → Multiple active incidents  
 
 This abstraction converts complex log data into a simple, understandable system state.
 
@@ -106,11 +106,11 @@ This abstraction converts complex log data into a simple, understandable system 
 
 The dashboard includes:
 
-- 📜 Live Log Stream  
-- 🚨 Active Incident Panel  
-- 📊 Service Error Distribution Chart  
-- 🟢 Dynamic Health Indicator  
-- 🌗 Dark / Light Mode Toggle  
+📜 Live Log Stream  
+🚨 Active Incident Panel  
+📊 Service Error Distribution Chart  
+🟢 Dynamic Health Indicator  
+🌗 Dark / Light Mode Toggle  
 
 ---
 
