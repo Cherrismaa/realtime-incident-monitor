@@ -1,16 +1,31 @@
-//src\app\layout.tsx
+// src/app/layout.tsx
 
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import ThemeToggle from "@/components/ThemeToggle";
 import Link from "next/link";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Realtime Monitor",
-  description: "Real-Time SaaS Monitoring Platform",
+  title: {
+    default: "Realtime Monitor",
+    template: "%s | Realtime Monitor",
+  },
+  description:
+    "Real-time monitoring and intelligent incident detection platform.",
+  icons: {
+    icon: [
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon/apple-touch-icon.png", sizes: "180x180" },
+    ],
+  },
+  manifest: "/favicon/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -21,18 +36,31 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} min-h-screen`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
           <div className="flex min-h-screen bg-white dark:bg-black text-black dark:text-white transition">
 
             {/* Sidebar */}
             <aside className="w-64 border-r border-gray-200 dark:border-gray-800 p-6 hidden md:block">
-              <h2 className="text-xl font-bold mb-8">Realtime Monitor</h2>
+              <h2 className="text-xl font-bold mb-8">
+                Realtime Monitor
+              </h2>
 
               <nav className="space-y-4 text-sm">
-                <Link href="/dashboard" className="block hover:opacity-70">
+                <Link
+                  href="/dashboard"
+                  className="block hover:opacity-70"
+                >
                   Dashboard
                 </Link>
-                <Link href="/incidents" className="block hover:opacity-70">
+
+                <Link
+                  href="/incidents"
+                  className="block hover:opacity-70"
+                >
                   Incidents
                 </Link>
               </nav>
@@ -56,6 +84,10 @@ export default function RootLayout({
             </div>
           </div>
         </ThemeProvider>
+
+        {/*  Vercel Speed Insights */}
+        <SpeedInsights />
+
       </body>
     </html>
   );
